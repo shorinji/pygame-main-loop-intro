@@ -27,7 +27,7 @@ while not done:
 	for event in pygame.event.get():
 		if event.type == QUIT:
 			done = True
-		if event.type == KEYDOWN and event.key == K_ESCAPE:
+		elif event.type == KEYDOWN and event.key == K_ESCAPE:
 			done = True
 
 	keys = pygame.key.get_pressed()
