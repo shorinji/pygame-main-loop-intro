@@ -11,7 +11,7 @@ To handle this properly we need to understand the role of the main loop, and how
 
 ## Main loop
 
-The main loop or main rendering loop is used to run your Pygame program in a way suitable for displaying graphics. 
+The *main loop* or *main rendering loop* is used to run your Pygame program in a way suitable for displaying graphics. 
 Each round through the main loop displays 1 frame of graphics. It is your priority as a developer to not interfere with this loop, like slowing it down with heavy calculations or to go on sidetracks with alternative loops inside.
 
 A proper main loop (in my opinion) should be divided into separate stages or phases with different responsibilities:
@@ -24,16 +24,16 @@ A proper main loop (in my opinion) should be divided into separate stages or pha
 
 #### handle events
 
-Stage inputs: events from pygame
-Stage outputs: changes to game state variables
+- Stage inputs: events from pygame
+- Stage outputs: changes to game state variables
 
 #### run game logic
 
-Stage inputs: game state variables
-Stage outputs: changes to game state variables
+- Stage inputs: game state variables
+- Stage outputs: changes to game state variables
 
 #### display graphics
 
-Stage inputs: game state variables
-Stage outputs: updated graphics on screen
+- Stage inputs: game state variables
+- Stage outputs: updated graphics on screen
 
