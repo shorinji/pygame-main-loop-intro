@@ -27,13 +27,26 @@ A proper main loop (in my opinion) should be divided into separate stages or pha
 - Stage inputs: events from pygame
 - Stage outputs: changes to game state variables
 
+This stage turns keyboard events (and other events) into changes to your state variables. You need to invent variables as you need them, for example: game state (is start screen or "playing" screen shown), player state (walking, shooting, idle etc), moving direction, a time or a frame count. These variables are used to send information into subsequent stages.
+
+
 #### run game logic
 
 - Stage inputs: game state variables
 - Stage outputs: changes to game state variables
+
+This stage is used for general calculations. It can be based on different kinds of state: 
+
+- state you setup before the main loop
+- state depending on keyboard or mouse input
+- state based on previous round through the main loop
+
+The output of the stage should be to prepare everything you need to redisplay the graphics for this frame.
+
 
 #### display graphics
 
 - Stage inputs: game state variables
 - Stage outputs: updated graphics on screen
 
+The final stage is where we take all prepared state variables needed and update the graphics on screen using pygame. Everything should be pre-calculated in the logic stage as far as possible.
