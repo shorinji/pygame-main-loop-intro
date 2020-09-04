@@ -1,3 +1,5 @@
+# Example code applying the structure from Readme.md
+# Displays a circle that the player can move using arrow keys
 import pygame
 import sys
 from pygame.locals import *
